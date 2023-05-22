@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Shortcut Extension",
+  "version": "1.0",
+  "description": "A Chrome extension with a shortcut key",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "accessMicrophone": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Shortcut for My Extension"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage"]
+}
