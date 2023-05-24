@@ -4,9 +4,14 @@
   "version": "1.0",
   "description": "A Chrome extension with a shortcut key",
   "background": {
-    "service_worker": "background.js",
-    "type": "module"
+    "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
   "commands": {
     "accessMicrophone": {
       "suggested_key": {
@@ -17,7 +22,7 @@
     }
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "./popup/popup.html"
   },
-  "permissions": ["activeTab", "storage"]
+  "permissions": ["activeTab", "storage", "audioCapture"]
 }
