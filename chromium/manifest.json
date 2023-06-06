@@ -13,16 +13,16 @@
     }
   ],
   "commands": {
-    "accessMicrophone": {
+    "_excute_browser_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+S",
         "mac": "Command+Shift+S"
       },
-      "description": "Shortcut for My Extension"
+      "description": "Speech to text extension"
     }
   },
   "action": {
     "default_popup": "./popup/popup.html"
   },
-  "permissions": ["activeTab", "storage", "audioCapture"]
+  "permissions": ["activeTab", "storage"]
 }
